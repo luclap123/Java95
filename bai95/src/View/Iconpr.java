@@ -15,12 +15,12 @@ import javax.swing.JMenuItem;
 
 public class Iconpr extends JFrame {
     private JMenuBar menubar;
-    private JMenu menu, submenu;
+    private JMenu menu, menu2, submenu;
     private JMenuItem i1, i2, i3, i4;
     private JButton JB1;
     private JLabel Label;
-    public Iconpr() 
-    {
+
+    public Iconpr() {
         // tạo cửa sổ
         this.setTitle("Icon");
         this.setSize(400, 400);
@@ -29,7 +29,8 @@ public class Iconpr extends JFrame {
 
         // tạo menu
         menubar = new JMenuBar();
-        menu = new JMenu("Menu");
+        menu = new JMenu("File");
+        menu2 = new JMenu("Edit");
         submenu = new JMenu("Submenu");
         i1 = new JMenuItem("open");
         i1.setIcon(new ImageIcon(getClass().getResource("picture\\open.png")));
@@ -45,8 +46,9 @@ public class Iconpr extends JFrame {
         submenu.add(i4);
         menu.add(submenu);
         menubar.add(menu);
-        
-        //set icon
+        menubar.add(menu2);
+
+        // set icon
         URL url = getClass().getResource("picture\\vscode.png");
         Image image = new ImageIcon(url).getImage();
         this.setIconImage(image);
@@ -56,7 +58,6 @@ public class Iconpr extends JFrame {
 
         // tạo label
         Label = new JLabel("Label");
-
 
         this.setLayout(new BorderLayout());
         this.add(menubar, BorderLayout.NORTH);
