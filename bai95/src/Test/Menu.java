@@ -1,8 +1,6 @@
-package Test;
 
-import View.ViewMenu;
 
-public class MyMenu {
+public class Menu {
     public static void main(String[] args) {
         new ViewMenu();
     }
